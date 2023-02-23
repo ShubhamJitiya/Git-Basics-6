@@ -1,0 +1,151 @@
+less than 50 mb
+
+Good evening to everyone
+I welcome you to our 3rd session of android study jams
+I our earlier session we had see about basics of kotlin
+like how to create fn, use fn, how to declare variables and constants,
+then we had also seen some keywords like when, conditional statements like if else,
+then we had seen what is the unique things about when if else in kotlin
+as compared to other programming languages kya easyness provide krta ha kotlin
+
+Phir humne dekha ki random number ko kese generate krte ha, aur infact hum ne ek game bhi banaya tha
+of truth and dare
+
+phir humne andorid studio ka intro dekha tha
+usma birthday card banya tha
+
+So, that was all about our previous two session
+
+now Let's see what we are going to learn in this session-3
+
+Aaj hum bananne vale he Lemonde app
+so jaldi se overview dekhte h actually akhir ha kya ye 
+aapko yeh description ma link hoga vaha se direct aap follw kar sakte ho 
+ek aur chez k bare ma ma jo aapko inform karna chahta hu that is about 
+dice roller aap
+which you can easily make, because we had already covered all the concepts
+yyeh project aapko 
+ android bascis ka andr, kotlin basics hoga, uske andr, add button k andr miljayega
+iskek andr aapko kafi sari chize sikhne milegi like 
+how to add image, how to set listeners, how to set text,  about resource dir n many more things
+
+Coming back to our lemonade app
+Lemonade app ma apko jyada kuch bhi nahi krna ha
+first lets understand thorugh this screenshots and emulator about what this app exactly does
+so things became more clear to you
+ 
+App jab run hoga to sabse pehle kuch is tarah se app ka initial state hona chahiye
+i think screen shots thode se aage piche hogaye ha, but focus on my emulator 
+
+intial state ma kya ha, ek textview aur ek image view
+text ma likha ha select a lemon- i.e muje lemons select krne ha
+lekin kitne? yeh defined nahi ha. So, apko agar yaad hoto, random number vala concept samjata 
+time apko inform kiya tha yeh aage humare bohot hi kaam ane vala ha
+vahi random number dice roller app and iske andr use hone vala ha.
+ek fn hoga pick() krke vaha se random lemons select honge
+
+random lemon select hone ke baad kuch changes hue/.
+kon kon se changes,  ek to text view aur image view
+aud for now we have only this two things
+
+ab text view kya bol rha ha, ki juice the lemon
+matlab hume kuch random lemon tree mase lemons tode, ab uska hume juice banana ha
+to hum click karenge juice nikalne k liye , matlab ki lemon ko squeeze karenge
+
+lekin kab tak juice nikalna ha? so obvsly jitne lemons ha utna hi nikle ga, aur
+ek baar squeeze kar diya to lemon kam honge.
+That is what we have to do
+
+
+ab agar sare lemon juice ho jayenge 
+matlab ki koi lemons nahi hoga humare paas to next state ma aate ha
+
+jaha par ek glass fill kiya hua dikh rha ha
+n saying, click to drink your lemonade
+so lets click and drink
+
+ab humne lemon juice pi liya to glass khali ho gaya aur ab agar clilck karenge to initial state 
+ana chahiye
+konsa initial sate?
+lemon tree vala image hona chahiye jaha se hum kuch random lemons pcik karenge
+
+yeh screenshots aap thode se change karlena
+
+apko pura new project nahi create krna ha isma, and in development also in most of the cases
+aapko ese project hi milenge jo already running ha, matlab kuch chize impelmented hogi
+aur apko prv code ko samjna hoga and you have to procedd further
+
+similarly inlogo ne bhi project diya hua ha
+jise apko yaha se download krna ha
+
+aur apko project kuch istarah se open krna ha
+yaha par hume ek mainactivty milti ha
+aur uska ek layout i.e design/or you can say userinterface
+
+sabse pehle hum user interface ko dekhte ha, ki kya usma kuch changes krne ha ki nahi
+before that inhone kuch isntructions diye ha. jo ki hume follow krna ha
+instructions are given in three steps
+1. configure the lemon image imageview to respond to user input
+matlab ki hume configure krna ha images ko kcuh is tarah ki user click kare jab 
+to relevent images changes hone chahiye, jesa ki humne emulator ma dkeha tha
+click krne pe images change ho rhe the
+2. implemetn clickLemonImage() to update the apps state
+matlab ki ek fn hume diya hoga, lekin voh empty hoga, hume use implement krna ha
+uske kuch states honge, use states ko follow krte hua implemetn krna
+3. 3rd is setView elements. yeh jo hoga vvoh responsible hoga jo bhi bhi screen par 
+chezi dekhani ha
+,
+above 2 steps ma sirf internally work ho rha tha lekin hume kuch dikhega nahi
+view ko set karne ke baad hi effect dikhega
+
+Lets go in our andorid studio 
+
+this are the instruvtions whichh we have to follow, and this screen shots are in wrong order.
+oky not an issue i guees now you people might understood about states.
+aur yaha par hume random lemons jo selct ho rhe the voh already implemnt kar ke diya ha
+
+in case if you stuck at any point, then you can take refernce from here also
+yaha par kaafi ache se aur detail m sari chize bata rakhi ha
+
+yaha par yeh log bol rhe ha ki app ko interactive banane k liye 
+hume do chize set krni ha
+first is setOnvlivk liseners
+second is set on on long click listeners 
+
+set on click listenr matlab ki jab ma ek baar screen ko touch karu, to kya hoga.
+and seton long click listeners matlab lambe time tak agr screen ko touch karke rakhu to kya hoga
+
+after that step - 2 ma click lemon image fn ma aage jo mane states ki baat kithi 
+vo yaha par mentioned ha
+ki states hume kis tarah se change krne ha
+
+now lets start coding,
+code krte time hume is references ki jaroorat pad sakti ha
+isma jo states given ha ise hum do tariko se code kar sakte ha
+fist is if else and second is when
+
+aur mane prev sessions ma bataya bhi tha that how interchangable we can we use this
+matlab jo kaam hum if else se kar sakte ha vahi same kaam when se bhi ho sakta ha
+and vice versa
+n code apko mere github k link par bhi miljayega jaha par mane if else se bhi implemenet kiya hua ha
+
+but kabhi kabhi when use karna better hota ha and sometimes if else
+anyways in sab k bare ma we had already discussed i'm jsut reminding you
+
+1st ma kya karna ha,
+state ka name ha select, aur transition karna ha hume squeeze state ma
+iske andr hum lemon ki size select karenge, kaha se random vale fn se whcich is already implemented
+by pick fn
+aur squeez count ko 0 set krna ha jo ki indicate krna ha kitni baar squeez hua lemon
+but initially humne sirf lemon ko selct kiya ha 
+we had not yet squeezed the lemon so setting it as 0
+
+
+now lets take selfie, to make our this journey memorable
+please turn on your web cams koi aur join nahi hona chahega, dhrumal kahan, hiren bhai
+lets take screenshot
+
+
+So thanks to all of you for being connected with me have a great day n here im ending this session.
+ 
+
